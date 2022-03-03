@@ -15,9 +15,9 @@ jobs:
       - image: circleci/mongo@sha256:5d8ab3f01299232b05d2d7ba46ff0ee7b0d7adbcb8e55f30b9fe9d8145fcbb96
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@5'
+      #- run:
+      #    name: update-npm
+      #    command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
